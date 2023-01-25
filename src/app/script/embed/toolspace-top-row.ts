@@ -14,13 +14,15 @@ import {BB} from "../bb/bb";
 // @ts-ignore
 import uiSwapImg from 'url:~/src/app/img/ui/ui-swap-lr.svg';
 // @ts-ignore
+import importImg from 'url:~/src/app/img/ui/import.svg';
+// @ts-ignore
 import helpImg from 'url:~/src/app/img/ui/help.svg';
 import {LANG} from '../language/language';
 
 export class ToolspaceTopRow {
     el: HTMLDivElement;
 
-    constructor(p: {onSubmit: () => void, onLeftRight: () => void, onHelp: () => void}) {
+    constructor(p: {onSubmit: () => void, onLeftRight: () => void, onHelp: () => void, onImport: () => void}) {
         let div = document.createElement('div');
         this.el = div;
         BB.css(div, {
@@ -96,10 +98,17 @@ export class ToolspaceTopRow {
             image: uiSwapImg,
             contain: true
         });
+        let uploadButton = createButton({
+            onClick: p.onImport,
+            title: LANG('file-upload'),
+            image: importImg,
+            contain: true
+        });
 
         div.appendChild(submitButton);
         div.appendChild(leftRightButton);
-        div.appendChild(helpButton);
+        // div.appendChild(helpButton);
+        div.appendChild(uploadButton);
     }
 
     getElement() {

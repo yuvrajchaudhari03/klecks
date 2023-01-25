@@ -1234,6 +1234,9 @@ export function KlApp(pProject: IKlProject | null, pOptions: IKlAppOptions) {
                 uiState = uiState === 'left' ? 'right' : 'left';
                 updateUi();
             },
+            onImport: () => {
+                fileTab.triggerImport();
+            },
         });
     } else {
         toolspaceTopRow = new KL.ToolspaceTopRow({
