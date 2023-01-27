@@ -33,8 +33,8 @@ export function EmbedWrapper(p: IEmbedParams) {
             ['position', 'fixed'],
             ['left', '0'],
             ['top', '0'],
-            ['width', '100vw'],
-            ['height', '100vh'],
+            ['width', '50vw'],
+            ['height', '50vh'],
 
             ['display', 'flex'],
             ['alignItems', 'center'],
