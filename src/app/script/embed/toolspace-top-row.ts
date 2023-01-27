@@ -108,7 +108,7 @@ export class ToolspaceTopRow {
         div.appendChild(submitButton);
         div.appendChild(leftRightButton);
         // div.appendChild(helpButton);
-        div.appendChild(uploadButton);
+        // div.appendChild(uploadButton);
     }
 
     getElement() {
