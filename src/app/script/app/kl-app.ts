@@ -1646,7 +1646,7 @@ export function KlApp(pProject: IKlProject | null, pOptions: IKlAppOptions) {
         filenameBase,
     );
 
-    const fileTab = pOptions.embed ? null : new KL.FileTab(
+    const fileTab =  new KL.FileTab(
         klRootEl,
         projectStore,
         () => klCanvas.getProject(),
